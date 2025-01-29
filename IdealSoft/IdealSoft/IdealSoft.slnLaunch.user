@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "..\\IdealSoftApi\\IdealSoftApi.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "IdealSoft.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

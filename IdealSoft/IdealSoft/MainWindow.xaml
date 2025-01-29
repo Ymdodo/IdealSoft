@@ -1,0 +1,54 @@
+﻿<Window x:Class="IdealSoft.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cadastro" Height="450" Width="800" Background="#344e6f">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="643*"/>
+            <ColumnDefinition Width="157*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="IdealSoft" HorizontalAlignment="Left" FontWeight="Bold" FontSize="32" Foreground="White" Margin="332,10,0,0"/>
+
+        <StackPanel Orientation="Vertical" Margin="10,10,10,10" Grid.ColumnSpan="2">
+
+            <TextBlock Text="Formulário de Cadastro" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,50,0,10"/>
+
+            <Border Background="White" Padding="10" CornerRadius="5">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                        <Label Content="Nome:" Foreground="Black" Margin="0,5,0,0"/>
+                        <TextBox x:Name="txtNome" Width="185" Height="22"/>
+                        <Label Content="Sobrenome:" Foreground="Black" Margin="10,5,0,0"/>
+                        <TextBox x:Name="txtSobrenome" Width="185" Height="22"/>
+                        <Label Content="Telefone:" Foreground="Black" Margin="10,5,0,0"/>
+                        <TextBox x:Name="txtTelefone" Width="185" Height="22"/>
+                    </StackPanel>
+                    <Button Content="Salvar" Width="100" HorizontalAlignment="Center" Background="#007ACC" Foreground="White" FontWeight="Bold" Margin="645,10,0,0" Click="Salvar_Click"/>
+                </StackPanel>
+            </Border>
+
+            <TextBlock Text="Histórico de Cadastro" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,20,0,10"/>
+
+            <Border Background="White" Padding="10" CornerRadius="5">
+                <DataGrid x:Name="CadastroGrid" AutoGenerateColumns="False" CanUserAddRows="False" Width="Auto" MaxWidth="900" HorizontalAlignment="left" Margin="0,10">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Width="*"/>
+                        <DataGridTextColumn Header="Sobrenome" Binding="{Binding Sobrenome}" Width="*"/>
+                        <DataGridTextColumn Header="Telefone" Binding="{Binding Telefone}" Width="*"/>
+
+                        <DataGridTemplateColumn Header="Ações" Width="Auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="Editar" Background="Green" Foreground="White" Margin="5,0" Click="Editar_Click" Tag="{Binding}"/>
+                                        <Button Content="Excluir" Background="Red" Foreground="White" Margin="5,0" Click="Excluir_Click" Tag="{Binding}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

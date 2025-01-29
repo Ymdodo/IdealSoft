@@ -1,0 +1,65 @@
+[
+  {
+    "ContainingType": "CadastrosController",
+    "Method": "GetAll",
+    "RelativePath": "api/Cadastros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CadastrosController",
+    "Method": "Create",
+    "RelativePath": "api/Cadastros",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cadastro",
+        "Type": "IdealSoftApi.Cadastro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CadastrosController",
+    "Method": "Update",
+    "RelativePath": "api/Cadastros/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cadastro",
+        "Type": "IdealSoftApi.Cadastro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CadastrosController",
+    "Method": "Delete",
+    "RelativePath": "api/Cadastros/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
